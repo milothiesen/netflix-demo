@@ -1,12 +1,15 @@
 // import logo from './logo.svg';
 import './App.css';
+import './Banner.css';
 import Row from './Row';
 import requests from './requests';
+import Banner from './Banner';
 
 function App() {
     return (
         <div className='App'>
-            <h1>hello</h1>
+            {/* Nav */}
+            <Banner />
             <Row
                 title='NETFLIX ORIGINALS'
                 fetchUrl={requests.fetchNetflixOriginals}

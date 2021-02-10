@@ -12,14 +12,12 @@ function Row({ title, fetchUrl, isLargeRow }) {
         async function fetchData() {
             const request = await axios.get(fetchUrl);
             setMovies(request.data.results);
-            console.log(request);
             return request;
         }
         // the variable inside fetchData() is a dependency. you always has to pass the dependent variable into the array of fetchData()
         // here we are telling useEffect that we are using a variable outside of the useEffect block
         fetchData();
     }, [fetchUrl]);
-    console.log(movies);
 
     return (
         <div className='row'>
